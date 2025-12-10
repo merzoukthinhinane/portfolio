@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thinhinane Merzouk - PhD Researcher Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom Configuration for Professional Look -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        :root {
+            --primary-bg: #0f172a; /* Slate 900 */
+            --secondary-bg: #1e293b; /* Slate 800 */
+            --accent-color: #3b82f6; /* Blue 500 */
+            --text-color: #f8fafc; /* Slate 50 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 9999px;
+        }
+        /* Style for cards */
+        .card {
+            background-color: var(--secondary-bg);
+            border: 1px solid #334155; /* Slate 700 */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .accent-text {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-xl font-bold accent-text">T. MERZOUK</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:accent-text transition duration-200">About</a>
+                <a href="#research" class="hover:accent-text transition duration-200">Research & Projects</a>
+                <a href="#skills" class="hover:accent-text transition duration-200">Skills</a>
+                <a href="#education" class="hover:accent-text transition duration-200">Education</a>
+                <a href="#contact" class="hover:accent-text transition duration-200">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-accent-color">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 shadow-xl">
+            <a href="#about" class="block px-4 py-2 hover:bg-gray-700 border-b border-gray-700">About</a>
+            <a href="#research" class="block px-4 py-2 hover:bg-gray-700 border-b border-gray-700">Research & Projects</a>
+            <a href="#skills" class="block px-4 py-2 hover:bg-gray-700 border-b border-gray-700">Skills</a>
+            <a href="#education" class="block px-4 py-2 hover:bg-gray-700 border-b border-gray-700">Education</a>
+            <a href="#contact" class="block px-4 py-2 hover:bg-gray-700">Contact</a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center py-20">
+            <div>
+                <p class="text-xl sm:text-2xl text-gray-400 mb-3">Hello, I'm</p>
+                <h1 class="text-6xl sm:text-8xl font-extrabold leading-tight tracking-tighter">
+                    THINHINANE <span class="accent-text">MERZOUK</span>
+                </h1>
+                <h2 class="text-2xl sm:text-3xl mt-4 font-light text-gray-300">
+                    PhD Researcher in Experimental Mechanics & Materials
+                </h2>
+                <div class="mt-8 space-x-4">
+                    <a href="#research" class="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition duration-300">
+                        View Research
+                    </a>
+                    <a href="#contact" class="inline-block px-6 py-3 border border-accent-color text-accent-color hover:bg-blue-500/10 font-semibold rounded-lg transition duration-300">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold section-title">About Me</h2>
+            <div class="grid md:grid-cols-3 gap-8 items-start">
+                <div class="md:col-span-2 text-lg text-gray-300 space-y-4">
+                    <p>I am a dedicated PhD Researcher in Mechanics and Materials, based at **Clermont Auvergne**. My core specialization lies in the study of the **thermo-mechanical behavior of Shape Memory Alloys (SMAs)** using advanced experimental techniques.</p>
+                    <p>My work combines solid theoretical understanding in continuum mechanics and applied thermodynamics with practical expertise in <span class="font-medium accent-text">full-field measurement methods</span> and <span class="font-medium accent-text">numerical simulation (Finite Element Methods - FEM)</span>.</p>
+                    <p>I am highly proficient in programming for scientific computing, particularly in **Python**, **C**, and **C++**, and utilize specialized software like **ANSYS** for complex simulations. I thrive on rigorous analysis, independent problem-solving, and collaborative team environments.</p>
+                </div>
+                <div class="md:col-span-1 p-6 card rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center"><i data-lucide="info" class="w-6 h-6 mr-2 accent-text"></i>Key Stats</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><i data-lucide="graduation-cap" class="w-5 h-5 mr-3 text-gray-500"></i><span class="font-semibold">Status:</span> PhD Student (ongoing)</li>
+                        <li class="flex items-center"><i data-lucide="cpu" class="w-5 h-5 mr-3 text-gray-500"></i><span class="font-semibold">Specialty:</span> Thermo-Mechanics, SMAs</li>
+                        <li class="flex items-center"><i data-lucide="code" class="w-5 h-5 mr-3 text-gray-500"></i><span class="font-semibold">Key Lang.:</span> C, C++, Python</li>
+                        <li class="flex items-center"><i data-lucide="layers-3" class="w-5 h-5 mr-3 text-gray-500"></i><span class="font-semibold">Key Software:</span> ANSYS, AutoCAD, QGIS</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research and Projects Section -->
+        <section id="research" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold section-title">Research & Technical Projects</h2>
+            <p class="text-xl text-gray-400 mb-8">Showcasing my work in experimental mechanics, numerical methods, and scientific programming.</p>
+
+            <div class="grid gap-8 lg:grid-cols-2">
+
+                <!-- Project 1: PhD Research -->
+                <article class="p-6 card rounded-xl">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="flask-conical" class="w-8 h-8 mr-3 accent-text"></i>
+                        <h3 class="text-2xl font-semibold">PhD Research: Shape Memory Alloys</h3>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">Clermont Auvergne | Oct 2025 - Present</p>
+                    <p class="text-gray-300 mb-4">Experimental study of the thermo-mechanical behavior of Shape Memory Alloys (SMAs) using coupled, full-field measurement techniques.</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1 ml-4">
+                        <li>Development of advanced full-field measurement methods (e.g., Digital Image Correlation, Localized Spectral Analysis - LSA).</li>
+                        <li>Coupling of experimental techniques (e.g., LSA - Infrared Thermography) for comprehensive thermo-mechanical analysis.</li>
+                        <li>In-depth analysis and exploitation of complex experimental data.</li>
+                    </ul>
+                </article>
+
+                <!-- Project 2: Master Thesis/Internship -->
+                <article class="p-6 card rounded-xl">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="test-tube-2" class="w-8 h-8 mr-3 accent-text"></i>
+                        <h3 class="text-2xl font-semibold">Master 2 Thesis: LSA & Thermography</h3>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">Institut Pascal (Master 2 MMF) | Apr 2025 - Sep 2025</p>
+                    <p class="text-gray-300 mb-4">Implementation and application of Localized Spectral Analysis (LSA) for precise displacement field measurement in experimental mechanics.</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1 ml-4">
+                        <li>Mastered and implemented the LSA method for field measurement.</li>
+                        <li>Developed the experimental coupling system between LSA and infrared thermography.</li>
+                        <li>Utilized <span class="font-medium text-white">OpenLSA</span> code for image processing and post-treatment of experimental data.</li>
+                    </ul>
+                </article>
+
+                <!-- Technical Project 1: Fretting/ANSYS -->
+                <article class="p-6 card rounded-xl col-span-1 lg:col-span-2">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="layers-3" class="w-8 h-8 mr-3 accent-text"></i>
+                        <h3 class="text-2xl font-semibold">Technical Project: Contact Mechanics Simulation</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Study of surface coating effects, focusing on **fretting** and **Hertz contact** simulations. This involved creating complex geometry and applying boundary conditions within a commercial Finite Element software.</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1 ml-4">
+                        <li><span class="font-medium text-white">Software:</span> ANSYS</li>
+                        <li><span class="font-medium text-white">Methods:</span> Fretting analysis, Hertzian contact modeling.</li>
+                    </ul>
+                </article>
+
+                <!-- Technical Project 2: Python Simulation -->
+                <article class="p-6 card rounded-xl col-span-1 lg:col-span-2">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="square-code" class="w-8 h-8 mr-3 accent-text"></i>
+                        <h3 class="text-2xl font-semibold">Technical Project: Chemical Compound Convection Simulation</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Numerical simulation of chemical compound convention using programming methods. Demonstrating capability in translating physical phenomena into computational models.</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1 ml-4">
+                        <li><span class="font-medium text-white">Methods:</span> Finite Volume Method.</li>
+                        <li><span class="font-medium text-white">Programming:</span> Python implementation.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold section-title">Technical Skills</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Core Competencies -->
+                <div class="p-6 card rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center"><i data-lucide="beaker" class="w-6 h-6 mr-2 accent-text"></i>Core Scientific Expertise</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 mr-3 text-green-400"></i>Mechanics of Continuous Media</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 mr-3 text-green-400"></i>Applied Thermodynamics</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 mr-3 text-green-400"></i>Experimental Methods & Data Analysis</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 mr-3 text-green-400"></i>Full-Field Measurement (LSA, DIC)</li>
+                    </ul>
+                </div>
+
+                <!-- Programming & Simulation -->
+                <div class="p-6 card rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center"><i data-lucide="code" class="w-6 h-6 mr-2 accent-text"></i>Programming & Simulation</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><i data-lucide="terminal" class="w-5 h-5 mr-3 text-amber-400"></i><span class="font-semibold">Languages:</span> C, C++, Python (Scientific Computing)</li>
+                        <li class="flex items-center"><i data-lucide="wrench" class="w-5 h-5 mr-3 text-amber-400"></i><span class="font-semibold">Numerical Methods:</span> Finite Element Method (FEM), Finite Volume</li>
+                        <li class="flex items-center"><i data-lucide="server" class="w-5 h-5 mr-3 text-amber-400"></i><span class="font-semibold">Tools:</span> OpenLSA, Post-Processing Scripts</li>
+                    </ul>
+                </div>
+
+                <!-- Software & Engineering -->
+                <div class="p-6 card rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center"><i data-lucide="laptop" class="w-6 h-6 mr-2 accent-text"></i>Software & Engineering</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><i data-lucide="box" class="w-5 h-5 mr-3 text-purple-400"></i><span class="font-semibold">Simulation:</span> ANSYS (Expert)</li>
+                        <li class="flex items-center"><i data-lucide="pencil-ruler" class="w-5 h-5 mr-3 text-purple-400"></i><span class="font-semibold">CAD/GIS:</span> AutoCAD, Covadis, QGIS, EPANET</li>
+                        <li class="flex items-center"><i data-lucide="speech" class="w-5 h-5 mr-3 text-purple-400"></i><span class="font-semibold">Languages:</span> French (Fluent), English (Professional)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold section-title">Education & Diplomas</h2>
+            <div class="space-y-10 relative">
+
+                <!-- Vertical Timeline Line -->
+                <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-700"></div>
+
+                <!-- PhD -->
+                <div class="flex flex-col md:flex-row items-center w-full">
+                    <div class="md:w-1/2 flex justify-end md:pr-12 relative order-2 md:order-1">
+                        <div class="p-6 card rounded-xl w-full max-w-lg md:text-right">
+                            <p class="text-lg font-semibold accent-text">Doctorate in Mechanics and Materials</p>
+                            <p class="text-gray-300">Clermont Auvergne - École Doctorale des Sciences pour l'Ingénieur (ED SPI)</p>
+                            <p class="text-sm text-gray-400 mt-2">Oct 2025 - Ongoing</p>
+                            <p class="text-sm text-gray-400 mt-1 italic">Focus: Experimental study of thermo-mechanical behavior of SMAs.</p>
+                        </div>
+                    </div>
+                    <div class="absolute md:relative w-10 h-10 bg-accent-color rounded-full border-4 border-primary-bg z-10 top-0 left-1/2 transform -translate-x-1/2 order-1 md:order-2"></div>
+                </div>
+
+                <!-- Master 2 -->
+                <div class="flex flex-col md:flex-row items-center w-full">
+                    <div class="absolute md:relative w-10 h-10 bg-accent-color rounded-full border-4 border-primary-bg z-10 top-0 left-1/2 transform -translate-x-1/2 order-1 md:order-2"></div>
+                    <div class="md:w-1/2 flex justify-start md:pl-12 relative order-2 md:order-2">
+                        <div class="p-6 card rounded-xl w-full max-w-lg">
+                            <p class="text-lg font-semibold accent-text">Master 2 Mathematics and Fundamental Mechanics (MMF)</p>
+                            <p class="text-gray-300">Université d'Evry Val d'Essonne - Paris Saclay</p>
+                            <p class="text-sm text-gray-400 mt-2">2024 - 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- State Engineering Diploma -->
+                <div class="flex flex-col md:flex-row items-center w-full">
+                    <div class="md:w-1/2 flex justify-end md:pr-12 relative order-2 md:order-1">
+                        <div class="p-6 card rounded-xl w-full max-w-lg md:text-right">
+                            <p class="text-lg font-semibold accent-text">State Engineering Diploma in Hydraulics</p>
+                            <p class="text-gray-300">École Nationale Supérieure d'Hydraulique de Blida, Algeria</p>
+                            <p class="text-sm text-gray-400 mt-2">2018 - 2023</p>
+                        </div>
+                    </div>
+                    <div class="absolute md:relative w-10 h-10 bg-accent-color rounded-full border-4 border-primary-bg z-10 top-0 left-1/2 transform -translate-x-1/2 order-1 md:order-2"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold section-title">Contact & Professional Links</h2>
+            <p class="text-xl text-gray-400 mb-8">Let's connect for collaborations, research opportunities, or technical discussions.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                
+                <div class="p-6 card rounded-xl flex flex-col items-center">
+                    <i data-lucide="mail" class="w-8 h-8 accent-text mb-3"></i>
+                    <h3 class="text-xl font-semibold mb-2">Email Address</h3>
+                    <p class="text-gray-300">thinhinane.merzouk@uca.fr</p>
+                </div>
+
+                <div class="p-6 card rounded-xl flex flex-col items-center">
+                    <i data-lucide="phone" class="w-8 h-8 accent-text mb-3"></i>
+                    <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                    <p class="text-gray-300">+33 7 82 60 92 64</p>
+                </div>
+
+                <div class="p-6 card rounded-xl flex flex-col items-center">
+                    <i data-lucide="map-pin" class="w-8 h-8 accent-text mb-3"></i>
+                    <h3 class="text-xl font-semibold mb-2">Location</h3>
+                    <p class="text-gray-300">Clermont-Ferrand, France</p>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 mt-16 py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 Thinhinane Merzouk. Built with HTML & Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Lucide Icons -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu after clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Add class to change link style on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('header');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-xl', 'bg-gray-900');
+            } else {
+                nav.classList.remove('shadow-xl', 'bg-gray-900');
+            }
+        });
+    </script>
+</body>
+</html>
